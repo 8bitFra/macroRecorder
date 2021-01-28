@@ -10,12 +10,15 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
 
+import program.MainProgram;
+
 public class UI {
 	public static Window gui = null;
 	
 	public static void run() {
 	    SwingUtilities.invokeLater(new Runnable() {
 	    	public void run() {
+	    		boolean flag = false;
 	    		gui = new Window();
 	            gui.setVisible(true);
 
@@ -33,7 +36,17 @@ public class UI {
 	    		browse.setDragEnabled(true);
 	    		browse.setDialogTitle("Choose input file");
 	    		browse.setControlButtonsAreShown(false);
-	    		play.addActionListener(new PlayAction(browse));
+	    		
+	    		if(MainProgram.astart!=null)
+	    		{
+	    			play.addActionListener(new PlayAction(MainProgram.astart));
+	    			flag = true;
+	    		}
+	    		else
+	    		{
+	    			play.addActionListener(new PlayAction(browse));
+	    		}
+	    		
 	    		record.addActionListener(new RecordAction(filename, browse));
 	    		
 	    	    actions.setLayout(gridbag);
@@ -51,6 +64,11 @@ public class UI {
 	    	    actions.add(play, c);
 	    	    
 	    	    gui.add(actions);
+	    	    
+	    	    if(flag)
+	    	    {
+	    	    	play.doClick();
+	    	    }
 	        }
 	    });	
 	}

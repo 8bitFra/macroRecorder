@@ -12,7 +12,7 @@ public class KeyListener implements NativeKeyListener {
 	public void nativeKeyReleased(final NativeKeyEvent e) {
 		String key = NativeKeyEvent.getKeyText(e.getKeyCode());
 
-		if (key.equals("Escape")) {
+		if (key.equals("Esc")) {
 			MainPlayer.exit = true;  
 		}
 	}

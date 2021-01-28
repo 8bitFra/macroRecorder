@@ -86,7 +86,7 @@ public class KeyRecorder implements NativeKeyListener {
             	keycode = 16;
             } else if (key.equals("Alt")) {
             	keycode = 18;
-            } else if (key.equals("Escape")) {
+            } else if (key.equals("Esc")) {
             	out.write("Exit");
             	out.newLine();
             	exit = true;
