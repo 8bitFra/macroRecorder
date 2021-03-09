@@ -15,9 +15,10 @@ Library
 
 Requirements
 ----
-*Only tested on 64-Bit Windows 7 with Lenono T430s keyboard. Should work with most North American keyboards.*
+*Only ested on 64-Bit Windows 10 with a Yueme. Should work with most North American keyboards.*
 
 - JDK 1.7
+- JDK 1.8
 <br></br>
 
 Use
