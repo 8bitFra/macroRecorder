@@ -1,7 +1,7 @@
 Macro Recorder
 =============
 ------------------------------------------
-Latest Version: [v.1.2.1][releases]
+Latest Version: [v.1.2.2][releases]
 
 A simple and lightweight global mouse and keyboard recorder and player. The recordings log the time between actions to simulate realistic playback when playing a recording. 
 
@@ -29,6 +29,8 @@ For recording, type in the text field for desired output filename. Files are sav
 
 Player and recording can be interrupted at any time by pressing and releasing ESC.
 
+You can add "-play macro.txt" in order to automatically start a macro when the software is opened.
+
 Known Issues
 ----
 You cannot hold down more than two keys and have it function properly (e.g. Ctrl+Alt+Del won't work). This is due JNativeHook's listeners.
@@ -37,5 +39,5 @@ The program will not work if opened by double-clicking the jar.
 
 [home]:https://code.google.com/p/jnativehook/
 [git]:https://github.com/kwhat/jnativehook/releases
-[releases]:https://github.com/georgeke/macroRecorder/releases
+[releases]:https://github.com/8bitFra/macroRecorder/releases
     
